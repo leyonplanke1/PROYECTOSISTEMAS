@@ -27,7 +27,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 
-
     Route::get("/v1/productos",[ProductosController::class,"getAll"]);
     Route::get("/v1/productos/{id}",[ProductosController::class,"getItem"]);
     Route::post("/v1/productos",[ProductosController::class,"store"]);
@@ -48,8 +47,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     Route::put("/v1/seguridad/usuarios",[CategoriasController::class,"update"]);
     Route::patch("/v1/seguridad/usuarios",[CategoriasController::class,"patch"]);
     Route::delete("/v1/seguridad/usuarios/{id}",[CategoriasController::class,"delete"]);    
-
-
 
 Route::post("/v1/seguridad/login",[SeguridadController::class,"login"]);
 
